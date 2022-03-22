@@ -2,11 +2,27 @@
 <html lang="en-US">
 <style>
 body {font-family: "Trebuchet MS";}
+.css-selector {
+    background: linear-gradient(188deg, #3753aa, #37b251);
+    min-height: 100vh;
+    min-width: 100hh;
+    animation: backgroundShift 15s ease infinite;
+}
+
+@keyframes backgroundShift {
+    0%{background-position:52% 0%}
+    50%{background-position:49% 100%}
+    100%{background-position:52% 0%}
+}
 </style>
 
-<body style="background-color:#10454F;">
+<body><div class="css-selector">
 <h1 style = "text-align:center;color:#818274;">Liam Edwards</h1>
 <p style = "text-align:center;color:#506266;"> Aerospace Engineering Student at University of California, Los Angeles </p>
 <p style = "text-align:center;color:#506266"> <i> Technical Breadth in Computer Science </i></p>
-
+ </div>
 </body>
+
+</html>
+
+
