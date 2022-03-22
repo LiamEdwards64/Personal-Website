@@ -12,8 +12,13 @@ div.background{
     min-height:100vh;
     min-width:200%;
 }
-body{
-    overflow-y: hidden;
+body {
+  -ms-overflow-style: none;
+  scrollbar-height: none;
+  overflow-x: scroll; 
+}
+body::-webkit-scrollbar {
+  display: none;
 }
     
 </style>
