@@ -4,53 +4,76 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Liam Edwards</title>
 <style>
+	
 body, html {
-  height: 100%;
-  margin: 0;
-}
-
-.bg {
-  background-image: url("background2.jpg");
-  height: 100%; 
-  width:600%;
-  background-position: center;
-  background-repeat: no-repeat;
+	height: 100vh;
+	margin:0;
 }
 body {
-  -ms-overflow-style: none;
-  scrollbar-height: none;
-  overflow-x: scroll; 
-  overflow-y: hidden;
-  font-family: "Tahoma";
+	-ms-overflow-style: none;
+	scrollbar-height: none;
+	overflow-x: scroll; 
+	overflow-y: hidden;
+	font-family: "Tahoma";
 }
 body::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
-.title {
-  margin: 0;
-  position: absolute;
-  text-align:center;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  color:white;
-  font-size:100px;
-}
-.p1 {
-  width:100%;
-}
-</style>
-</head>
-<body>
+	.bg {
+		background-image: url("background2.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		position:absolute;
+		height: 100vh; 
+		width:600%;
+	}
+	.p1 {
+		width:100vw;
+		height:100vh;
+		position:absolute;
+	}
+	.title {
+		text-align: center;
+		vertical-align: middle;
+		color:white;
+		font-size:100px;
+	}
+	.test {
+		text-align: center;
+		vertical-align: middle;
+		color:black;
+		font-size:100px;
+	}
+	.text {
+		text-align: center;		
+		color:white;
+		font-size:20px;
+	}
 
+</style>
+<script>
+	const scrollContainer = document.querySelector("main");
+	scrollContainer.addEventListener("wheel", (evt) => {
+		evt.preventDefault();
+		scrollContainer.scrollLeft += evt.deltaY;
+	});
+</script>
+</head>
+	
+<body>
+<main>
 <div class="bg">
   <div class ="p1">
-  <h1 class="title">Liam Edwards</h1>
+  	<h1 class="title" id="name">Liam Edwards</h1>
+	<p class="text">Hey! Welcome to my website – I'm looking forward to introducing myself.</p>
+	<br><br><br><br><br><br><br>
+	<p class="text"><em>Scroll   to learn more</em></p>
   </div>
 </div>
+</main>
 
 </body>
 </html>
